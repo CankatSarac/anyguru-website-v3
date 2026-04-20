@@ -69,44 +69,29 @@ function initCursor() {
   const dot  = qs('#cursor-dot');
   const ring = qs('#cursor-ring');
   if (!dot || !ring) return;
-  if (window.innerWidth < 600) return;
+  if (window.innerWidth < 768) return;
   if (window.matchMedia('(hover: none)').matches) return;
 
-  document.body.classList.add('custom-cursor-active');
+  document.body.classList.add('has-custom-cursor');
 
-  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-  let ringX = mouseX, ringY = mouseY;
-  let isVisible = false;
+  let mouseX = -200, mouseY = -200;
+  let ringX = -200, ringY = -200;
 
   on(document, 'mousemove', e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    if (!isVisible) {
-      isVisible = true;
-      dot.style.opacity = '1';
-      ring.style.opacity = '1';
-    }
   });
 
-  on(document, 'mouseleave', () => {
-    dot.style.opacity = '0';
-    ring.style.opacity = '0';
-  });
-
-  function animateCursor() {
-    dot.style.left  = mouseX + 'px';
-    dot.style.top   = mouseY + 'px';
-
-    // Ring follows with lag
+  function loop() {
+    dot.style.left = mouseX + 'px';
+    dot.style.top  = mouseY + 'px';
     ringX += (mouseX - ringX) * 0.12;
     ringY += (mouseY - ringY) * 0.12;
     ring.style.left = ringX + 'px';
     ring.style.top  = ringY + 'px';
-
-    raf(animateCursor);
+    raf(loop);
   }
-
-  raf(animateCursor);
+  raf(loop);
 }
 
 /* ══════════════════════════════════════════════════════════
