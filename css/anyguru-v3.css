@@ -936,6 +936,10 @@ h1, h2, h3, h4, h5 {
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-card);
   min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
 
 .hero-stat-card-1 {
@@ -962,9 +966,10 @@ h1, h2, h3, h4, h5 {
 .hero-mini-chart {
   display: flex;
   align-items: flex-end;
-  gap: 5px;
-  height: 50px;
-  margin: 8px 0;
+  gap: 4px;
+  height: 44px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .hero-mini-bar {
@@ -980,8 +985,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-stat-icon {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--radius-sm);
   background: var(--accent-dim);
   display: flex;
@@ -989,42 +994,48 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   color: var(--accent);
   margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .hero-stat-value {
   font-family: var(--font-display);
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 800;
   line-height: 1;
   display: flex;
   align-items: baseline;
-  gap: 1px;
+  gap: 2px;
   white-space: nowrap;
+  margin-bottom: 5px;
 }
 
 .stat-currency {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  opacity: 0.7;
+  opacity: 0.65;
+  padding-bottom: 1px;
 }
 
 .hero-stat-label {
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  margin-top: 4px;
+  line-height: 1.35;
+  margin-bottom: 10px;
 }
 
 .hero-stat-trend {
-  display: inline-flex;
+  display: flex;
+  align-self: flex-start;
   align-items: center;
   gap: 4px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: #4ade80;
   background: rgba(74,222,128,0.1);
   padding: 3px 8px;
   border-radius: 100px;
-  margin-top: 8px;
+  margin-top: auto;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /* Peek guru */
