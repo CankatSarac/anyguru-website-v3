@@ -70,9 +70,12 @@ function initCursor() {
   const ring = qs('#cursor-ring');
   if (!dot || !ring) return;
   if (window.innerWidth < 600) return;
+  if (window.matchMedia('(hover: none)').matches) return;
 
-  let mouseX = -100, mouseY = -100;
-  let ringX = -100, ringY = -100;
+  document.body.classList.add('custom-cursor-active');
+
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  let ringX = mouseX, ringY = mouseY;
   let isVisible = false;
 
   on(document, 'mousemove', e => {
