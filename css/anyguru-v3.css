@@ -69,6 +69,7 @@ button { font-family: inherit; cursor: none; border: none; background: none; }
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
+  opacity: 0;
   transition: opacity 0.3s;
 }
 
