@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AnyGuru — AI-powered business team for UK SMEs. 5 specialist AI gurus across finance, tech, HR, operations and strategy. One subscription." />
+  <title>AnyGuru — Your AI Team, Ready to Work</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/brand/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.0.3/src/index.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/anyguru-v3.css" />
+</head>
+<body>
+
+  <!-- ── Grain Overlay ─────────────────────────────────── -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ── Custom Cursor ─────────────────────────────────── -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 1 — LOADER
+  ════════════════════════════════════════════════════ -->
+  <div id="loader" role="status" aria-label="Loading AnyGuru">
+    <img src="img/brand/logo.png" alt="AnyGuru" class="loader-logo" width="160" />
+    <div class="loader-counter-wrap">
+      <span id="loader-counter" class="loader-counter">0</span>
+    </div>
+    <div class="loader-bar" aria-hidden="true">
+      <div class="loader-bar-fill" id="loader-bar-fill"></div>
+    </div>
+    <p class="loader-tagline">Your AI Team, Ready to Work</p>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 2 — NAV
+  ════════════════════════════════════════════════════ -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-brand" aria-label="AnyGuru — Home">
+          <img src="img/brand/logo.png" alt="" class="nav-logo" width="36" height="36" aria-hidden="true" />
+          <span class="nav-brand-name">any.guru</span>
+        </a>
+
+        <nav class="nav-cta" aria-label="Primary navigation">
+          <a href="#pricing" class="btn btn-primary magnetic-wrap">
+            Get Started
+            <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+          <button
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen overlay menu -->
+  <nav id="nav-overlay" class="nav-overlay" aria-label="Full screen navigation" aria-hidden="true">
+    <ul class="nav-overlay-links" role="list">
+      <li>
+        <a href="#platform" class="nav-overlay-link">
+          <span class="link-num">01</span>
+          Platform
+          <i class="ph ph-arrow-up-right link-arrow" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#gurus" class="nav-overlay-link">
+          <span class="link-num">02</span>
+          Our Gurus
+          <i class="ph ph-arrow-up-right link-arrow" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#how-it-works" class="nav-overlay-link">
+          <span class="link-num">03</span>
+          How It Works
+          <i class="ph ph-arrow-up-right link-arrow" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#pricing" class="nav-overlay-link">
+          <span class="link-num">04</span>
+          Pricing
+          <i class="ph ph-arrow-up-right link-arrow" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#faq" class="nav-overlay-link">
+          <span class="link-num">05</span>
+          FAQ
+          <i class="ph ph-arrow-up-right link-arrow" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav-overlay-footer">
+      <p class="text-muted text-sm">any.guru &copy; 2025</p>
+      <div class="nav-overlay-socials" aria-label="Social links">
+        <a href="https://linkedin.com" aria-label="LinkedIn" rel="noopener">
+          <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com" aria-label="Twitter / X" rel="noopener">
+          <i class="ph ph-x-logo" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com" aria-label="Instagram" rel="noopener">
+          <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 3 — HERO
+  ════════════════════════════════════════════════════ -->
+  <main>
+  <section id="hero" class="hero" aria-label="Hero — Your AI team, ready to work">
+    <!-- Background -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-gradient-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left -->
+        <div class="hero-left">
+          <div class="hero-caption" role="doc-subtitle">
+            <span class="hero-caption-dot" aria-hidden="true"></span>
+            AI-Powered Business Team
+          </div>
+
+          <h1 class="hero-title" aria-label="Your AI team, ready to work for you.">
+            <span class="hero-title-line">
+              <span class="hero-title-line-inner">Your AI team,</span>
+            </span>
+            <span class="hero-title-line">
+              <span class="hero-title-line-inner">ready to <em>work</em></span>
+            </span>
+            <span class="hero-title-line">
+              <span class="hero-title-line-inner">for you.</span>
+            </span>
+          </h1>
+
+          <!-- Service tags marquee -->
+          <div class="hero-tags-scroll" aria-label="Service areas" aria-hidden="true">
+            <div class="hero-tags-track">
+              <span class="hero-tag-item">Finance</span>
+              <span class="hero-tag-item">Marketing</span>
+              <span class="hero-tag-item">HR</span>
+              <span class="hero-tag-item">Legal</span>
+              <span class="hero-tag-item">Strategy</span>
+              <span class="hero-tag-item">Operations</span>
+              <span class="hero-tag-item">Tech</span>
+              <span class="hero-tag-item">24/7</span>
+              <!-- Duplicate for seamless loop -->
+              <span class="hero-tag-item">Finance</span>
+              <span class="hero-tag-item">Marketing</span>
+              <span class="hero-tag-item">HR</span>
+              <span class="hero-tag-item">Legal</span>
+              <span class="hero-tag-item">Strategy</span>
+              <span class="hero-tag-item">Operations</span>
+              <span class="hero-tag-item">Tech</span>
+              <span class="hero-tag-item">24/7</span>
+            </div>
+          </div>
+
+          <!-- Trust row -->
+          <div class="hero-trust">
+            <div class="hero-avatars" aria-label="Customer avatars" role="img">
+              <div class="hero-avatar">
+                <img src="img/gurus/vanilla/guru-1.png" alt="Customer" width="40" height="40" loading="eager" />
+              </div>
+              <div class="hero-avatar">
+                <img src="img/gurus/vanilla/guru-2.png" alt="Customer" width="40" height="40" loading="eager" />
+              </div>
+              <div class="hero-avatar">
+                <img src="img/gurus/vanilla/guru-3.png" alt="Customer" width="40" height="40" loading="eager" />
+              </div>
+              <div class="hero-avatar">
+                <img src="img/gurus/vanilla/guru-4.png" alt="Customer" width="40" height="40" loading="eager" />
+              </div>
+              <div class="hero-avatar">
+                <img src="img/gurus/vanilla/guru-5.png" alt="Customer" width="40" height="40" loading="eager" />
+              </div>
+            </div>
+            <div class="hero-trust-text">
+              <span class="hero-trust-num">2,400+ UK SMEs</span>
+              <span class="hero-trust-label">already growing with AnyGuru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — floating objects -->
+        <div class="hero-right" aria-hidden="true">
+
+          <!-- Main guru card -->
+          <div class="hero-main-card" role="img" aria-label="Tech Guru — The Innovator">
+            <img
+              src="img/gurus/valhalla/guru-tech.png"
+              alt="The Innovator — Tech &amp; Digital Guru"
+              class="hero-main-card-img"
+              width="280"
+              loading="eager"
+            />
+            <div class="hero-main-card-body">
+              <p class="hero-main-card-label">Tech &amp; Digital</p>
+              <h2 class="hero-main-card-name">The Innovator</h2>
+              <p class="hero-main-card-desc">Your AI expert for digital strategy &amp; tech.</p>
+            </div>
+          </div>
+
+          <!-- Stat card 1 -->
+          <div class="hero-stat-card hero-stat-card-1" role="figure">
+            <div class="hero-stat-icon" aria-hidden="true">
+              <i class="ph ph-trend-up"></i>
+            </div>
+            <div class="hero-stat-value"><span class="stat-currency">£</span>18,400</div>
+            <div class="hero-stat-label">saved this quarter</div>
+            <div class="hero-stat-trend">
+              <i class="ph ph-arrow-up" aria-hidden="true"></i>
+              +24% vs last quarter
+            </div>
+          </div>
+
+          <!-- Stat card 2 -->
+          <div class="hero-stat-card hero-stat-card-2" role="figure">
+            <div class="hero-stat-icon" aria-hidden="true">
+              <i class="ph ph-lightning"></i>
+            </div>
+            <div class="hero-stat-value">1,247</div>
+            <div class="hero-stat-label">tasks automated this month</div>
+            <div class="hero-stat-trend">
+              <i class="ph ph-arrow-up" aria-hidden="true"></i>
+              +37% efficiency gain
+            </div>
+          </div>
+
+          <!-- Chart card -->
+          <div class="hero-stat-card hero-stat-card-3" role="figure">
+            <div class="hero-stat-label" style="margin-bottom:10px;">Monthly revenue growth</div>
+            <div class="hero-mini-chart" aria-hidden="true">
+              <div class="hero-mini-bar" style="--h:40%"></div>
+              <div class="hero-mini-bar" style="--h:65%"></div>
+              <div class="hero-mini-bar" style="--h:50%"></div>
+              <div class="hero-mini-bar" style="--h:80%"></div>
+              <div class="hero-mini-bar" style="--h:70%"></div>
+              <div class="hero-mini-bar hero-mini-bar-accent" style="--h:95%"></div>
+            </div>
+            <div class="hero-stat-trend"><i class="ph ph-arrow-up"></i> +12% this month</div>
+          </div>
+
+          <!-- Finance guru peek -->
+          <img
+            src="img/gurus/valhalla/guru-finance.png"
+            alt=""
+            class="hero-guru-peek"
+            aria-hidden="true"
+            width="100"
+            loading="eager"
+          />
+        </div>
+
+      </div><!-- /hero-inner -->
+
+      <!-- Scroll button -->
+      <a href="#guru-strip" class="hero-scroll-btn" aria-label="Scroll to explore">
+        <div class="hero-scroll-btn-ring" aria-hidden="true"><!-- JS builds SVG --></div>
+        <div class="hero-scroll-btn-center" aria-hidden="true">
+          <i class="ph ph-arrow-down" style="color:#F0EDE8; font-size:1.25rem;"></i>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 4 — GURU SHOWCASE STRIP
+  ════════════════════════════════════════════════════ -->
+  <section id="guru-strip" class="guru-strip" aria-label="Meet the Gurus">
+    <div class="guru-strip-track" aria-hidden="true">
+      <!-- Original -->
+      <article class="guru-card-strip" style="--card-tilt:-2deg;">
+        <img src="img/gurus/valhalla/guru-tech.png" alt="The Innovator" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Tech &amp; Digital</span>
+        <span class="guru-card-strip-name">The Innovator</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:1.5deg;">
+        <img src="img/gurus/valhalla/guru-finance.png" alt="The Counsellor" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Finance &amp; Legal</span>
+        <span class="guru-card-strip-name">The Counsellor</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:-1deg;">
+        <img src="img/gurus/valhalla/guru-ops.png" alt="The Builder" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Operations</span>
+        <span class="guru-card-strip-name">The Builder</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:2deg;">
+        <img src="img/gurus/valhalla/guru-hr.png" alt="The Coordinator" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">HR &amp; People</span>
+        <span class="guru-card-strip-name">The Coordinator</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:-1.5deg;">
+        <img src="img/gurus/valhalla/guru-nature.png" alt="The Explorer" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Growth &amp; Strategy</span>
+        <span class="guru-card-strip-name">The Explorer</span>
+      </article>
+      <!-- Duplicate for loop -->
+      <article class="guru-card-strip" style="--card-tilt:-2deg;" aria-hidden="true">
+        <img src="img/gurus/valhalla/guru-tech.png" alt="" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Tech &amp; Digital</span>
+        <span class="guru-card-strip-name">The Innovator</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:1.5deg;" aria-hidden="true">
+        <img src="img/gurus/valhalla/guru-finance.png" alt="" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Finance &amp; Legal</span>
+        <span class="guru-card-strip-name">The Counsellor</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:-1deg;" aria-hidden="true">
+        <img src="img/gurus/valhalla/guru-ops.png" alt="" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Operations</span>
+        <span class="guru-card-strip-name">The Builder</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:2deg;" aria-hidden="true">
+        <img src="img/gurus/valhalla/guru-hr.png" alt="" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">HR &amp; People</span>
+        <span class="guru-card-strip-name">The Coordinator</span>
+      </article>
+      <article class="guru-card-strip" style="--card-tilt:-1.5deg;" aria-hidden="true">
+        <img src="img/gurus/valhalla/guru-nature.png" alt="" class="guru-card-strip-img" width="100" loading="lazy" />
+        <span class="guru-card-strip-role">Growth &amp; Strategy</span>
+        <span class="guru-card-strip-name">The Explorer</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 5 — PLATFORM INTRO
+  ════════════════════════════════════════════════════ -->
+  <section id="platform" class="platform-intro" aria-labelledby="platform-heading">
+    <div class="container">
+      <div class="platform-intro-inner">
+
+        <div class="platform-intro-left">
+          <span class="section-label">What we do</span>
+          <h2 id="platform-heading" class="platform-intro-heading split-text io-fade-up">
+            Blending AI expertise with your business goals.
+          </h2>
+        </div>
+
+        <div class="platform-intro-right io-stagger">
+          <p class="platform-intro-desc">
+            AnyGuru gives UK SMEs instant access to a full team of AI specialists — without the
+            overhead. Each Guru is trained on real business knowledge and ready to advise,
+            automate, and execute tasks across every function in your company.
+          </p>
+
+          <ul class="platform-features-list" role="list">
+            <li class="platform-feature-item">
+              <div class="platform-feature-check" aria-hidden="true">
+                <i class="ph ph-check-bold"></i>
+              </div>
+              <p class="platform-feature-text">
+                <strong>Always available.</strong> Your Gurus work 24/7 — no sick days, no
+                holidays, no overtime costs.
+              </p>
+            </li>
+            <li class="platform-feature-item">
+              <div class="platform-feature-check" aria-hidden="true">
+                <i class="ph ph-check-bold"></i>
+              </div>
+              <p class="platform-feature-text">
+                <strong>UK-focused expertise.</strong> Built for British regulations, tax codes,
+                employment law and business culture.
+              </p>
+            </li>
+            <li class="platform-feature-item">
+              <div class="platform-feature-check" aria-hidden="true">
+                <i class="ph ph-check-bold"></i>
+              </div>
+              <p class="platform-feature-text">
+                <strong>One subscription, five specialists.</strong> Finance, HR, Tech, Ops and
+                Strategy — all included.
+              </p>
+            </li>
+          </ul>
+
+          <div class="platform-img-card">
+            <img
+              src="img/rayo/01_fea-img.webp"
+              alt="AnyGuru platform dashboard showing AI assistant interface"
+              loading="lazy"
+              width="600"
+              height="280"
+              data-parallax="0.12"
+            />
+          </div>
+
+          <a href="#gurus" class="btn btn-primary magnetic-wrap">
+            Meet the Gurus
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 6 — GURUS GRID
+  ════════════════════════════════════════════════════ -->
+  <section id="gurus" class="gurus-grid-section" aria-labelledby="gurus-heading">
+    <div class="container">
+
+      <header class="gurus-grid-header">
+        <img
+          src="img/brand/gurus-banner-1.png"
+          alt="Meet the AnyGuru Team — five specialist AI Gurus ready to help your business"
+          class="gurus-grid-banner"
+          loading="lazy"
+        />
+        <div class="gurus-grid-header-text">
+          <div>
+            <span class="section-label">Meet your team</span>
+            <h2 id="gurus-heading" class="gurus-grid-title io-fade-up">
+              5 Specialist Gurus, one subscription.
+            </h2>
+          </div>
+          <p class="gurus-grid-desc io-fade-up">
+            Each Guru brings deep expertise in their domain, trained to understand the nuances
+            of UK business operations.
+          </p>
+        </div>
+      </header>
+
+      <div class="gurus-grid io-stagger" role="list">
+
+        <!-- Guru 1 — The Innovator -->
+        <article class="guru-card guru-card-1" role="listitem">
+          <div class="guru-card-img-wrap">
+            <img
+              src="img/gurus/valhalla/guru-tech.png"
+              alt="The Innovator — Tech &amp; Digital Guru"
+              class="guru-card-img"
+              style="--rot: -3deg; animation-delay: 0s;"
+              loading="lazy"
+              width="200"
+            />
+          </div>
+          <span class="guru-card-role">Tech &amp; Digital</span>
+          <h3 class="guru-card-name">The Innovator</h3>
+          <p class="guru-card-desc">
+            Your digital strategist and tech advisor. From software decisions to cybersecurity,
+            The Innovator keeps your business ahead of the curve.
+          </p>
+          <div class="guru-card-tags">
+            <span class="guru-card-tag">Software</span>
+            <span class="guru-card-tag">Cybersecurity</span>
+            <span class="guru-card-tag">Automation</span>
+            <span class="guru-card-tag">Digital Strategy</span>
+          </div>
+        </article>
+
+        <!-- Guru 2 — The Counsellor -->
+        <article class="guru-card guru-card-2" role="listitem">
+          <div class="guru-card-img-wrap">
+            <img
+              src="img/gurus/valhalla/guru-finance.png"
+              alt="The Counsellor — Finance &amp; Legal Guru"
+              class="guru-card-img"
+              style="--rot: 2deg; animation-delay: 0.4s;"
+              loading="lazy"
+              width="200"
+            />
+          </div>
+          <span class="guru-card-role">Finance &amp; Legal</span>
+          <h3 class="guru-card-name">The Counsellor</h3>
+          <p class="guru-card-desc">
+            Expert guidance on UK tax, cashflow, contracts and compliance. The Counsellor ensures
+            your finances and legal standing are always solid.
+          </p>
+          <div class="guru-card-tags">
+            <span class="guru-card-tag">HMRC</span>
+            <span class="guru-card-tag">Cashflow</span>
+            <span class="guru-card-tag">Contracts</span>
+            <span class="guru-card-tag">Compliance</span>
+          </div>
+        </article>
+
+        <!-- Guru 3 — The Explorer -->
+        <article class="guru-card guru-card-3" role="listitem">
+          <div class="guru-card-img-wrap">
+            <img
+              src="img/gurus/valhalla/guru-nature.png"
+              alt="The Explorer — Growth &amp; Strategy Guru"
+              class="guru-card-img"
+              style="--rot: -2deg; animation-delay: 0.2s;"
+              loading="lazy"
+              width="160"
+            />
+          </div>
+          <span class="guru-card-role">Growth &amp; Strategy</span>
+          <h3 class="guru-card-name">The Explorer</h3>
+          <p class="guru-card-desc">
+            Chart new territories for your business with market analysis and growth strategy.
+          </p>
+          <div class="guru-card-tags">
+            <span class="guru-card-tag">Market Research</span>
+            <span class="guru-card-tag">Growth</span>
+          </div>
+        </article>
+
+        <!-- Guru 4 — The Builder -->
+        <article class="guru-card guru-card-4" role="listitem">
+          <div class="guru-card-img-wrap">
+            <img
+              src="img/gurus/valhalla/guru-ops.png"
+              alt="The Builder — Operations Guru"
+              class="guru-card-img"
+              style="--rot: 1.5deg; animation-delay: 0.6s;"
+              loading="lazy"
+              width="160"
+            />
+          </div>
+          <span class="guru-card-role">Operations</span>
+          <h3 class="guru-card-name">The Builder</h3>
+          <p class="guru-card-desc">
+            Optimise processes, workflows and supply chains to scale with confidence.
+          </p>
+          <div class="guru-card-tags">
+            <span class="guru-card-tag">Processes</span>
+            <span class="guru-card-tag">Workflows</span>
+          </div>
+        </article>
+
+        <!-- Guru 5 — The Coordinator -->
+        <article class="guru-card guru-card-5" role="listitem">
+          <div class="guru-card-img-wrap">
+            <img
+              src="img/gurus/valhalla/guru-hr.png"
+              alt="The Coordinator — HR &amp; People Guru"
+              class="guru-card-img"
+              style="--rot: -1deg; animation-delay: 0.8s;"
+              loading="lazy"
+              width="160"
+            />
+          </div>
+          <span class="guru-card-role">HR &amp; People</span>
+          <h3 class="guru-card-name">The Coordinator</h3>
+          <p class="guru-card-desc">
+            From hiring to culture, keep your people happy and your HR compliant.
+          </p>
+          <div class="guru-card-tags">
+            <span class="guru-card-tag">Hiring</span>
+            <span class="guru-card-tag">HR Law</span>
+          </div>
+        </article>
+
+      </div><!-- /gurus-grid -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 7 — HOW IT WORKS
+  ════════════════════════════════════════════════════ -->
+  <section id="how-it-works" class="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:60px;">
+        <span class="section-label">The process</span>
+        <h2 id="how-heading" class="text-4xl io-fade-up" style="font-family:var(--font-display);font-weight:800;letter-spacing:-0.03em;">
+          From question to answer<br />in seconds.
+        </h2>
+      </div>
+
+      <div class="how-it-inner">
+
+        <!-- Steps -->
+        <div class="how-steps io-stagger" aria-label="Steps to use AnyGuru">
+          <div class="how-step active" role="button" tabindex="0" aria-expanded="true">
+            <div class="how-step-line"><div class="how-step-line-fill"></div></div>
+            <div class="how-step-num" aria-hidden="true">01</div>
+            <div class="how-step-content">
+              <h3 class="how-step-title">Choose your Guru</h3>
+              <p class="how-step-desc">
+                Select the specialist that matches your challenge — from finance and legal to tech
+                and operations. Each Guru has deep domain expertise tailored for UK SMEs.
+              </p>
+            </div>
+          </div>
+
+          <div class="how-step" role="button" tabindex="0" aria-expanded="false">
+            <div class="how-step-line"><div class="how-step-line-fill"></div></div>
+            <div class="how-step-num" aria-hidden="true">02</div>
+            <div class="how-step-content">
+              <h3 class="how-step-title">Ask your question</h3>
+              <p class="how-step-desc">
+                Type naturally. Your Guru understands context, follows up with clarifying
+                questions, and goes deep on the detail — just like a real advisor would.
+              </p>
+            </div>
+          </div>
+
+          <div class="how-step" role="button" tabindex="0" aria-expanded="false">
+            <div class="how-step-line"><div class="how-step-line-fill"></div></div>
+            <div class="how-step-num" aria-hidden="true">03</div>
+            <div class="how-step-content">
+              <h3 class="how-step-title">Get expert guidance</h3>
+              <p class="how-step-desc">
+                Receive actionable, UK-specific advice instantly. Download reports, generate
+                documents, and track tasks — all within the same conversation.
+              </p>
+            </div>
+          </div>
+
+          <div class="how-step" role="button" tabindex="0" aria-expanded="false">
+            <div class="how-step-line"><div class="how-step-line-fill"></div></div>
+            <div class="how-step-num" aria-hidden="true">04</div>
+            <div class="how-step-content">
+              <h3 class="how-step-title">Automate &amp; grow</h3>
+              <p class="how-step-desc">
+                Your Gurus learn your business over time, proactively flagging risks, suggesting
+                opportunities, and automating repetitive tasks so you can focus on growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat mockup -->
+        <div class="how-chat io-scale" role="img" aria-label="AnyGuru chat interface example">
+          <div class="how-chat-header">
+            <div class="how-chat-avatar">
+              <img src="img/gurus/valhalla/guru-finance.png" alt="The Counsellor" width="40" height="40" loading="lazy" />
+            </div>
+            <div>
+              <p class="how-chat-title">The Counsellor</p>
+              <p class="how-chat-subtitle" style="display:flex;align-items:center;gap:6px;">
+                <span class="how-chat-status-dot" aria-hidden="true"></span>
+                Finance &amp; Legal Guru · Online
+              </p>
+            </div>
+          </div>
+
+          <div class="how-chat-messages" role="log" aria-live="polite" aria-label="Chat messages">
+            <div class="chat-msg user chat-msg-1">
+              <div class="chat-msg-bubble">
+                How much can I claim back on business expenses this year?
+              </div>
+              <div class="chat-msg-avatar-sm">
+                <img src="img/gurus/vanilla/guru-1.png" alt="You" width="32" height="32" loading="lazy" />
+              </div>
+            </div>
+
+            <div class="chat-msg chat-msg-2">
+              <div class="chat-msg-avatar-sm">
+                <img src="img/gurus/valhalla/guru-finance.png" alt="The Counsellor" width="32" height="32" loading="lazy" />
+              </div>
+              <div class="chat-msg-bubble">
+                Great question! For 2024/25 you can claim the Annual Investment Allowance up
+                to £1 million. Let me check your industry... Are you VAT registered?
+              </div>
+            </div>
+
+            <div class="chat-msg user chat-msg-3">
+              <div class="chat-msg-bubble">
+                Yes, been VAT registered since 2021.
+              </div>
+              <div class="chat-msg-avatar-sm">
+                <img src="img/gurus/vanilla/guru-1.png" alt="You" width="32" height="32" loading="lazy" />
+              </div>
+            </div>
+
+            <div class="chat-msg chat-msg-4">
+              <div class="chat-msg-avatar-sm">
+                <img src="img/gurus/valhalla/guru-finance.png" alt="The Counsellor" width="32" height="32" loading="lazy" />
+              </div>
+              <div class="chat-msg-bubble">
+                Perfect. Based on your profile, you could save an estimated
+                <strong style="color:var(--text);">£4,200</strong> this year. Want me to
+                generate a full expense report?
+              </div>
+            </div>
+          </div>
+
+          <div class="how-chat-input" aria-label="Chat input area">
+            <input
+              class="how-chat-input-field"
+              type="text"
+              placeholder="Ask your Guru anything..."
+              aria-label="Type a message to your Guru"
+              readonly
+            />
+            <button class="btn btn-primary" style="padding:10px 16px;border-radius:var(--radius-md);" aria-label="Send message">
+              <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 8 — STATS
+  ════════════════════════════════════════════════════ -->
+  <section class="stats-section" aria-label="AnyGuru impact statistics">
+    <div class="container">
+      <div class="stats-grid io-stagger">
+
+        <div class="stat-block">
+          <img
+            src="img/gurus/valhalla/guru-tech.png"
+            alt=""
+            class="stat-guru-deco"
+            aria-hidden="true"
+            loading="lazy"
+            width="120"
+          />
+          <div class="stat-num">
+            <span class="stat-prefix">£</span><span data-count="18400" data-prefix="£" data-suffix="">18,400</span>
+          </div>
+          <p class="stat-label">average annual savings per SME</p>
+        </div>
+
+        <div class="stat-block">
+          <img
+            src="img/gurus/valhalla/guru-finance.png"
+            alt=""
+            class="stat-guru-deco"
+            aria-hidden="true"
+            loading="lazy"
+            width="120"
+          />
+          <div class="stat-num">
+            <span data-count="2400" data-suffix="+">2,400+</span>
+          </div>
+          <p class="stat-label">UK SMEs trust AnyGuru</p>
+        </div>
+
+        <div class="stat-block">
+          <img
+            src="img/gurus/valhalla/guru-ops.png"
+            alt=""
+            class="stat-guru-deco"
+            aria-hidden="true"
+            loading="lazy"
+            width="120"
+          />
+          <div class="stat-num">
+            <span data-count="97" data-suffix="%">97%</span>
+          </div>
+          <p class="stat-label">customer satisfaction score</p>
+        </div>
+
+        <div class="stat-block">
+          <img
+            src="img/gurus/valhalla/guru-hr.png"
+            alt=""
+            class="stat-guru-deco"
+            aria-hidden="true"
+            loading="lazy"
+            width="120"
+          />
+          <div class="stat-num">
+            <span data-count="24">24</span><span style="color:var(--accent)">/7</span>
+          </div>
+          <p class="stat-label">round-the-clock availability</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 9 — FEATURES BENTO
+  ════════════════════════════════════════════════════ -->
+  <section class="features-section" id="features" aria-labelledby="features-heading">
+    <div class="container">
+      <header class="features-header">
+        <span class="section-label">Features</span>
+        <h2 id="features-heading" class="features-title io-fade-up">
+          Everything a business expert<br>team provides.
+        </h2>
+      </header>
+
+      <div class="services-stack">
+
+        <div class="service-stack-item">
+          <div class="service-stack-inner service-stack-dark">
+            <div class="service-stack-top">
+              <div class="service-stack-num">/01</div>
+              <h3 class="service-stack-title">UK Business Intelligence</h3>
+            </div>
+            <p class="service-stack-desc">
+              Each Guru is trained on HMRC rules, employment law, Companies House requirements, and live UK market data. Every answer applies specifically to your British business — not generic international guidance.
+            </p>
+            <div class="service-stack-tags">
+              <span class="svc-tag">HMRC</span>
+              <span class="svc-tag">Employment Law</span>
+              <span class="svc-tag">UK Regulations</span>
+              <span class="svc-tag">Companies House</span>
+            </div>
+            <div class="service-stack-integrations">
+              <span class="service-integrations-label">Connects with</span>
+              <div class="service-logos">
+                <img src="img/rayo/deepseek.svg" alt="DeepSeek" height="20" loading="lazy" />
+                <img src="img/rayo/crewai.svg" alt="CrewAI" height="20" loading="lazy" />
+                <img src="img/rayo/mozilla.svg" alt="Mozilla" height="20" loading="lazy" />
+                <img src="img/rayo/udemy.svg" alt="Udemy" height="20" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-stack-item">
+          <div class="service-stack-inner service-stack-red">
+            <div class="service-stack-top">
+              <div class="service-stack-num">/02</div>
+              <h3 class="service-stack-title">Always On, Always Instant</h3>
+            </div>
+            <p class="service-stack-desc">
+              No appointments, no waiting rooms, no £300/hr rates. Your Gurus are available 24 hours a day, 7 days a week — responding in seconds, whether you're preparing for a 6am board meeting or reviewing contracts at midnight.
+            </p>
+            <div class="service-stack-tags">
+              <span class="svc-tag svc-tag-light">24/7 Availability</span>
+              <span class="svc-tag svc-tag-light">Instant Response</span>
+              <span class="svc-tag svc-tag-light">No Waiting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-stack-item">
+          <div class="service-stack-inner service-stack-base">
+            <div class="service-stack-top">
+              <div class="service-stack-num">/03</div>
+              <h3 class="service-stack-title">Document Generation</h3>
+            </div>
+            <p class="service-stack-desc">
+              Ask your Guru to draft contracts, HR policies, financial summaries, board reports, proposals — anything. Get professional-quality documents in seconds, tailored for your business. Every document is legally aware and UK-compliant.
+            </p>
+            <div class="service-stack-tags">
+              <span class="svc-tag">Contracts</span>
+              <span class="svc-tag">HR Policies</span>
+              <span class="svc-tag">Financial Reports</span>
+              <span class="svc-tag">Proposals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-stack-item">
+          <div class="service-stack-inner service-stack-dark">
+            <div class="service-stack-top">
+              <div class="service-stack-num">/04</div>
+              <h3 class="service-stack-title">Team Memory &amp; Context</h3>
+            </div>
+            <p class="service-stack-desc">
+              Your Gurus share knowledge about your business. The Innovator knows what The Counsellor advised on your cashflow. You never repeat yourself — your AI team builds a unified, growing picture of your business and its goals over time.
+            </p>
+            <div class="service-stack-tags">
+              <span class="svc-tag">Business Context</span>
+              <span class="svc-tag">Cross-Guru Memory</span>
+              <span class="svc-tag">Personalisation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 10 — THEMES
+  ════════════════════════════════════════════════════ -->
+  <section class="themes-section" aria-labelledby="themes-heading">
+    <div class="container">
+      <header class="themes-header">
+        <span class="section-label">Choose your style</span>
+        <h2 id="themes-heading" class="themes-title io-fade-up">Two Guru universes. Same expertise.</h2>
+        <p class="themes-subtitle io-fade-up">Choose the personality that fits your brand.</p>
+      </header>
+
+      <div class="themes-grid io-stagger">
+
+        <div class="theme-card" role="button" tabindex="0" aria-label="Valhalla theme — Viking gnome characters">
+          <img
+            src="img/brand/hero-banner.png"
+            alt="Valhalla Gurus — five Viking gnome characters on a red background"
+            class="theme-card-img"
+            loading="lazy"
+            width="700"
+            height="400"
+          />
+          <div class="theme-card-overlay">
+            <span class="theme-card-label">Theme 01</span>
+            <h3 class="theme-card-name">Valhalla</h3>
+            <p class="theme-card-desc">Bold, characterful Viking gnome Gurus. Perfect for businesses that want personality and warmth.</p>
+          </div>
+        </div>
+
+        <div class="theme-card" role="button" tabindex="0" aria-label="Vanilla theme — professional AI advisors">
+          <div class="theme-card-vanilla-collage">
+            <img src="img/gurus/vanilla/guru-1.png" alt="Vanilla Guru — Professional Advisor" class="vanilla-hero-img" loading="lazy" />
+            <div class="vanilla-mini-grid">
+              <img src="img/gurus/vanilla/guru-3.png" alt="" class="vanilla-mini-img" loading="lazy" aria-hidden="true" />
+              <img src="img/gurus/vanilla/guru-2.png" alt="" class="vanilla-mini-img" loading="lazy" aria-hidden="true" />
+              <img src="img/gurus/vanilla/guru-7.png" alt="" class="vanilla-mini-img" loading="lazy" aria-hidden="true" />
+              <img src="img/gurus/vanilla/guru-6.png" alt="" class="vanilla-mini-img" loading="lazy" aria-hidden="true" />
+            </div>
+          </div>
+          <div class="theme-card-overlay">
+            <span class="theme-card-label">Theme 02</span>
+            <h3 class="theme-card-name">Vanilla</h3>
+            <p class="theme-card-desc">Professional portrait-style AI advisors. Ideal for corporate, finance, and professional services firms.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 11 — TESTIMONIALS
+  ════════════════════════════════════════════════════ -->
+  <section class="testimonials-section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <header class="testimonials-header">
+        <span class="section-label">What our clients say</span>
+        <h2 id="testimonials-heading" class="testimonials-title io-fade-up">
+          Loved by UK businesses.
+        </h2>
+      </header>
+
+      <div class="testimonials-grid io-stagger">
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+          </div>
+          <blockquote class="testimonial-quote">
+            AnyGuru's Counsellor saved us £6,200 in the first month alone by catching a VAT
+            reclaim we'd been missing for two years. The ROI is genuinely extraordinary.
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="img/gurus/vanilla/guru-1.png" alt="Sarah Mitchell" width="48" height="48" loading="lazy" />
+            </div>
+            <div>
+              <p class="testimonial-name">Sarah Mitchell</p>
+              <p class="testimonial-role">Director, Mitchell Interiors Ltd</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+          </div>
+          <blockquote class="testimonial-quote">
+            I used to spend 4 hours a week on HR admin. Now it's 20 minutes. The Coordinator
+            handles everything from employment contracts to disciplinary procedures. Incredible.
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="img/gurus/vanilla/guru-3.png" alt="James Okafor" width="48" height="48" loading="lazy" />
+            </div>
+            <div>
+              <p class="testimonial-name">James Okafor</p>
+              <p class="testimonial-role">Founder, Okafor &amp; Associates</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+            <i class="ph-fill ph-star" aria-hidden="true"></i>
+          </div>
+          <blockquote class="testimonial-quote">
+            As a small manufacturing firm, we couldn't afford proper tech consultancy. The
+            Innovator gave us a full digital transformation plan that would have cost £15k
+            from an agency. For £79 a month.
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="img/gurus/vanilla/guru-5.png" alt="Priya Sharma" width="48" height="48" loading="lazy" />
+            </div>
+            <div>
+              <p class="testimonial-name">Priya Sharma</p>
+              <p class="testimonial-role">CEO, Northgate Manufacturing</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 12 — PRICING
+  ════════════════════════════════════════════════════ -->
+  <section id="pricing" class="pricing-section" aria-labelledby="pricing-heading">
+    <div class="container">
+      <header class="pricing-header">
+        <span class="section-label">Simple pricing</span>
+        <h2 id="pricing-heading" class="pricing-title io-fade-up">
+          One price. All five Gurus.
+        </h2>
+
+        <!-- Monthly / Annual toggle -->
+        <div class="pricing-toggle-wrap" role="group" aria-label="Billing period selector">
+          <span id="pricing-monthly-label" class="pricing-toggle-label active">Monthly</span>
+          <label class="pricing-toggle" aria-label="Switch to annual billing">
+            <input type="checkbox" id="pricing-toggle-input" role="switch" aria-checked="false" />
+            <span class="pricing-toggle-slider"></span>
+          </label>
+          <span id="pricing-annual-label" class="pricing-toggle-label">Annual</span>
+          <span class="pricing-save-badge">Save 20%</span>
+        </div>
+      </header>
+
+      <div class="pricing-grid io-stagger">
+
+        <!-- Starter -->
+        <article class="pricing-card">
+          <p class="pricing-plan-name">Starter</p>
+          <div class="pricing-price">
+            <span class="pricing-currency">£</span>
+            <span class="pricing-amount" data-monthly="29" data-annual="23">
+              <span data-monthly="29">29</span>
+              <span data-annual="23" style="display:none;">23</span>
+            </span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <p class="pricing-desc">For sole traders and micro businesses just getting started with AI.</p>
+          <ul class="pricing-features" role="list">
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              2 Gurus of your choice
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              50 conversations / month
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Document generation (10/mo)
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Email support
+            </li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;">
+              Get started free
+            </a>
+          </div>
+        </article>
+
+        <!-- Growth (featured) -->
+        <article class="pricing-card pricing-card-featured">
+          <div class="pricing-popular-badge" aria-label="Most popular plan">Most Popular</div>
+          <p class="pricing-plan-name">Growth</p>
+          <div class="pricing-price">
+            <span class="pricing-currency">£</span>
+            <span class="pricing-amount">
+              <span data-monthly="79">79</span>
+              <span data-annual="63" style="display:none;">63</span>
+            </span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <p class="pricing-desc">For growing businesses that need full expert coverage across all areas.</p>
+          <ul class="pricing-features" role="list">
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              <strong>All 5 Gurus included</strong>
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Unlimited conversations
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Unlimited document generation
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Priority support
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Business Intelligence dashboard
+            </li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Start free trial
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Professional -->
+        <article class="pricing-card">
+          <p class="pricing-plan-name">Professional</p>
+          <div class="pricing-price">
+            <span class="pricing-currency">£</span>
+            <span class="pricing-amount">
+              <span data-monthly="149">149</span>
+              <span data-annual="119" style="display:none;">119</span>
+            </span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <p class="pricing-desc">For established businesses needing team access and custom AI workflows.</p>
+          <ul class="pricing-features" role="list">
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Everything in Growth
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Up to 10 team members
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Custom AI workflows
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              API access
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+              Dedicated account manager
+            </li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;">
+              Contact sales
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 13 — FAQ
+  ════════════════════════════════════════════════════ -->
+  <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="faq-inner">
+
+        <!-- Sidebar -->
+        <div class="faq-sidebar io-fade-up">
+          <span class="section-label">FAQ</span>
+          <h2 id="faq-heading" class="faq-sidebar-title">Got questions?<br />We've got answers.</h2>
+          <p class="faq-sidebar-desc">
+            Everything you need to know about AnyGuru. Can't find what you're looking for?
+            Chat with us directly.
+          </p>
+          <img
+            src="img/gurus/valhalla/guru-ops.png"
+            alt="The Builder Guru"
+            class="faq-sidebar-guru"
+            loading="lazy"
+            width="140"
+          />
+        </div>
+
+        <!-- Questions -->
+        <div class="faq-list io-stagger" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              How is AnyGuru different from ChatGPT or Copilot?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-1" class="faq-answer" role="region">
+              <p class="faq-answer-text">
+                Unlike general AI tools, AnyGuru's Gurus are specialists trained on UK business
+                knowledge, regulations, and market data. They don't give generic answers — they
+                give advice that's actionable in the British business context. They also remember
+                your business over time and proactively surface opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              Is my data safe and confidential?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-2" class="faq-answer" role="region">
+              <p class="faq-answer-text">
+                Absolutely. AnyGuru is ISO 27001 certified and fully GDPR compliant. Your
+                conversations are encrypted end-to-end and are never used to train AI models.
+                Your data is yours — we never sell or share it with third parties.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              Can I try it for free?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-3" class="faq-answer" role="region">
+              <p class="faq-answer-text">
+                Yes! All plans include a 14-day free trial with no credit card required. You'll
+                get full access to your chosen plan's features so you can see the value before
+                committing. Cancel anytime.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              How accurate is the advice for UK-specific situations?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-4" class="faq-answer" role="region">
+              <p class="faq-answer-text">
+                Highly accurate. Our Gurus are trained on up-to-date UK legislation, HMRC
+                guidance, Companies House requirements, and UK employment law. However, for
+                high-stakes legal or financial decisions, we always recommend verifying with
+                a qualified professional.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+              Can multiple team members use the same account?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-5" class="faq-answer" role="region">
+              <p class="faq-answer-text">
+                The Professional plan supports up to 10 team members, each with their own
+                login and conversation history. The Starter and Growth plans are for single-user
+                access, though you can upgrade at any time.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+              What if I need help getting started?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-answer-6" class="faq-answer" role="region">
+              <p class="faq-answer-text">
+                Every new customer receives an onboarding session where we set up your business
+                profile and ensure each Guru understands your context. Our support team is also
+                available via chat, email, and phone (Growth &amp; Professional plans).
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 14 — CTA
+  ════════════════════════════════════════════════════ -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="cta-bg-gradient" aria-hidden="true"></div>
+    <div class="container">
+
+      <div class="cta-gurus-row" aria-hidden="true">
+        <img src="img/gurus/valhalla/guru-finance.png" alt="" class="cta-guru-img" loading="lazy" />
+        <img src="img/gurus/valhalla/guru-hr.png"      alt="" class="cta-guru-img" loading="lazy" />
+        <img src="img/gurus/valhalla/guru-tech.png"    alt="" class="cta-guru-img" loading="lazy" />
+        <img src="img/gurus/valhalla/guru-ops.png"     alt="" class="cta-guru-img" loading="lazy" />
+        <img src="img/gurus/valhalla/guru-nature.png"  alt="" class="cta-guru-img" loading="lazy" />
+      </div>
+
+      <h2 id="cta-heading" class="cta-title io-fade-up">
+        Your AI team is waiting<br />to meet you.
+      </h2>
+      <p class="cta-subtitle io-fade-up">
+        Join 2,400+ UK SMEs saving time and money with AnyGuru.
+        Start your free 14-day trial today — no credit card required.
+      </p>
+
+      <div class="cta-buttons io-stagger">
+        <a href="#pricing" class="btn btn-primary magnetic-wrap" style="padding:18px 36px;font-size:1.0625rem;">
+          Start free trial
+          <i class="ph ph-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="#platform" class="btn btn-outline magnetic-wrap" style="padding:18px 36px;font-size:1.0625rem;">
+          See how it works
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 15 — FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-brand-row">
+            <img src="img/brand/logo.png" alt="" class="footer-logo" loading="lazy" width="36" height="36" aria-hidden="true" />
+            <span class="footer-brand-name">any.guru</span>
+          </div>
+          <p class="footer-tagline">
+            AI-powered expert team for UK SMEs. Five specialist Gurus, one subscription, zero hassle.
+          </p>
+          <div class="footer-socials" aria-label="AnyGuru social media links">
+            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" rel="noopener noreferrer">
+              <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter / X" rel="noopener noreferrer">
+              <i class="ph ph-x-logo" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram" rel="noopener noreferrer">
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" class="footer-social-link" aria-label="YouTube" rel="noopener noreferrer">
+              <i class="ph ph-youtube-logo" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Platform -->
+        <nav aria-label="Platform links">
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#gurus" class="footer-link">Meet the Gurus</a></li>
+            <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+            <li><a href="#features" class="footer-link">Features</a></li>
+            <li><a href="#pricing" class="footer-link">Pricing</a></li>
+            <li><a href="#" class="footer-link">Integrations</a></li>
+          </ul>
+        </nav>
+
+        <!-- Company -->
+        <nav aria-label="Company links">
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" class="footer-link">About AnyGuru</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Press</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Support -->
+        <nav aria-label="Support links">
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#" class="footer-link">Help Centre</a></li>
+            <li><a href="#" class="footer-link">Status Page</a></li>
+            <li><a href="#" class="footer-link">API Docs</a></li>
+            <li>
+              <a href="mailto:hello@any.guru" class="footer-link">
+                <i class="ph ph-envelope" aria-hidden="true"></i>
+                hello@any.guru
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div><!-- /footer-grid -->
+
+      <div class="footer-bottom">
+        <p class="footer-legal">
+          &copy; 2025 AnyGuru Ltd. Registered in England and Wales. Company No. 12345678.
+        </p>
+        <nav class="footer-legal-links" aria-label="Legal links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Cookie Policy</a>
+          <a href="#" class="footer-legal-link">GDPR</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/anyguru-v3.js"></script>
+
+</body>
+</html>
